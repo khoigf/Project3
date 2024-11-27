@@ -4,9 +4,10 @@ import { ItemDisplay } from './ItemDisplay';
 
 export function TodoListCard() {
     const [items, setItems] = useState(null);
+    const apiUrl = import.meta.env.VITE_API_URL || "";
 
     useEffect(() => {
-        fetch('/api/items')
+        fetch(apiUrl+'/api/items')
             .then((r) => r.json())
             .then(setItems);
     }, []);

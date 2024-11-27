@@ -17,8 +17,9 @@ export function AddItemForm({ onNewItem }) {
             body: JSON.stringify({ name: newItem }),
             headers: { 'Content-Type': 'application/json' },
         };
+        const apiUrl = import.meta.env.VITE_API_URL || "";
 
-        fetch('/api/items', options)
+        fetch(apiUrl+'/api/items', options)
             .then((r) => r.json())
             .then((item) => {
                 onNewItem(item);

@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors');
 const app = express();
 const db = require('./persistence');
 const getGreeting = require('./routes/getGreeting');
@@ -9,6 +10,12 @@ const deleteItem = require('./routes/deleteItem');
 
 app.use(express.json());
 app.use(express.static(__dirname + '/static'));
+
+app.use(cors({
+    origin: 'http://localhost:5173', // Thay thế bằng URL của frontend nếu cần
+    methods: 'GET,POST,PUT,DELETE',
+    allowedHeaders: 'Content-Type,Authorization'
+}));
 
 app.get('/api/greeting', getGreeting);
 app.get('/api/items', getItems);

@@ -10,8 +10,9 @@ import faSquare from '@fortawesome/fontawesome-free-regular/faSquare';
 import './ItemDisplay.scss';
 
 export function ItemDisplay({ item, onItemUpdate, onItemRemoval }) {
+    const apiUrl = import.meta.env.VITE_API_URL || "";
     const toggleCompletion = () => {
-        fetch(`/api/items/${item.id}`, {
+        fetch(apiUrl+`/api/items/${item.id}`, {
             method: 'PUT',
             body: JSON.stringify({
                 name: item.name,
@@ -24,7 +25,7 @@ export function ItemDisplay({ item, onItemUpdate, onItemRemoval }) {
     };
 
     const removeItem = () => {
-        fetch(`/api/items/${item.id}`, { method: 'DELETE' }).then(() =>
+        fetch(apiUrl+`/api/items/${item.id}`, { method: 'DELETE' }).then(() =>
             onItemRemoval(item),
         );
     };

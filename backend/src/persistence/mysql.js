@@ -38,15 +38,23 @@ async function init() {
         charset: 'utf8mb4',
     });
 
-    return new Promise((acc, rej) => {
+    return new Promise((resolve, reject) => {
         pool.query(
-            'CREATE TABLE IF NOT EXISTS todo_items (id varchar(36), name varchar(255), completed boolean) DEFAULT CHARSET utf8mb4',
+            `CREATE TABLE IF NOT EXISTS todo_items (
+                id VARCHAR(36),
+                name VARCHAR(255),
+                completed BOOLEAN,
+                PRIMARY KEY (id)
+            ) DEFAULT CHARSET=utf8mb4`,
             (err) => {
-                if (err) return rej(err);
+                if (err) {
+                    console.error('Failed to create table:', err);
+                    return reject(err);
+                }
 
-                console.log(`Connected to mysql db at host ${HOST}`);
-                acc();
-            },
+                console.log(`Connected to MySQL database at host ${host}`);
+                resolve();
+            }
         );
     });
 }
