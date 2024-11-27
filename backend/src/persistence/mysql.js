@@ -1,4 +1,5 @@
 const waitPort = require('wait-port');
+require('dotenv').config();
 const fs = require('fs');
 const mysql = require('mysql2');
 
