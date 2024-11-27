@@ -832,7 +832,7 @@ babel-preset-jest@^29.6.3:
 "backend@file:.":
   version "1.0.0"
   dependencies:
-    backend "file:C:/Users/Dell/AppData/Local/Yarn/Cache/v6/npm-backend-1.0.0-f2c1e157-d0ea-4e06-8956-5e4c4c9a47ba-1732642602331/node_modules/backend"
+    backend "file:C:/Users/Dell/AppData/Local/Yarn/Cache/v6/npm-backend-1.0.0-bd743170-5841-451e-ab33-cddb8a52973c-1732643630380/node_modules/backend"
     dotenv "^16.4.5"
     express "^4.21.1"
     mysql2 "^3.11.4"
@@ -1512,9 +1512,9 @@ fs.realpath@^1.0.0:
   integrity sha512-OO0pH2lK6a0hZnAdau5ItzHPI6pUlvI7jMVnxUQRtw4owF2wk8lOSabtGDCTP4Ggrg2MbGnWO9X8K1t4+fGMDw==
 
 fsevents@^2.3.2, fsevents@~2.3.2:
-  version "2.3.3"
-  resolved "https://registry.yarnpkg.com/fsevents/-/fsevents-2.3.3.tgz#cac6407785d03675a2a5e1a5305c697b347d90d6"
-  integrity sha512-5xoDfX+fL7faATnagmWPpbFtwh/R77WmMMqqHGS65C3vvB0YHrgF+B1YmZ3441tMj5n63k0212XNoJwzlhffQw==
+  version "2.3.2"
+  resolved "https://registry.npmjs.org/fsevents/-/fsevents-2.3.2.tgz"
+  integrity sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==
 
 function-bind@^1.1.1, function-bind@^1.1.2:
   version "1.1.2"
