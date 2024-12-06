@@ -4,16 +4,16 @@ To spin up the project, simply install Docker Desktop and then run the following
 commands:
 
 ```
-git clone https://github.com/docker/getting-started-todo-app
-cd getting-started-todo-app
+git clone https://github.com/khoigf/Project3.git
+cd Project3
 docker compose up -d
 ```
 
 or
 
 ```
-git clone https://github.com/docker/getting-started-todo-app
-cd getting-started-todo-app
+git clone https://github.com/khoigf/Project3.git
+cd Project3
 docker compose watch
 ```
 
